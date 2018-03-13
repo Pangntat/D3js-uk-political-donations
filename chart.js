@@ -246,12 +246,22 @@ function moveToParties(alpha) {
 	
 	function moveToAmount(alpha) {
 	return function(d) {
-		var centreX = partyCentres[d.party].x + 50;
-		if (d.entity === 'pub') {
-			centreX = 1200;
-		} else {
-			centreY = partyCentres[d.party].y;
-		}
+		var centreY = svgCentre.y;
+		if (d.value <= 25001) {
+				centreX = svgCentre.x + 250;
+			} else if (d.value <= 50001) {
+			        centreX = svgCentre.x + 200;
+			} else if (d.value <= 100001) {
+				centreX = svgCentre.x + 175;
+			} else  if (d.value <= 500001) {
+				centreX = svgCentre.x + 150;
+			} else  if (d.value <= 1000001) {
+				centreX = svgCentre.x +80;
+			} else if (d.value<= maxVal) {	
+				centreX =svgCentre.x;
+			} else {
+				centreX = svgCentre.x;
+			}
 
 		d.x += (centreX - d.x) * (brake + 0.02) * alpha * 1.1;
 		d.y += (centreY - d.y) * (brake + 0.02) * alpha * 1.1;
