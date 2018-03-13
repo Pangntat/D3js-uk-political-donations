@@ -39,11 +39,13 @@
     </script>
     
     
-   <script>
-       var click = new Audio();
-       click.src = "Mousclik.wav";
-    </script>   
-    
+   <audio id="sound" src="Mousclik.wav"></audio>
+    <a onclick = "playSound();"></a>
+    <script>
+        function playSound() {
+          var sound = document.getElementById("sound");
+          sound.play();
+      }
     
     
 </head>
@@ -56,13 +58,13 @@
     </header>
     <nav role="navigation">
         <ul class=zoom>
-            <li><a href="#" role="button" class="pure-button switch" id="all-donations" onmousedown="click.play()">All money</a>
+            <li><a href="#" role="button" class="pure-button switch" id="all-donations" a onclick = "playSound()">All money</a>
             </li>
-            <li><a href="#" role="button" class="pure-button switch" id="group-by-money-source"  onmousedown="click.play()">The public's purse</a>
+            <li><a href="#" role="button" class="pure-button switch" id="group-by-money-source"  a onclick = "playSound()">The public's purse</a>
             </li>
-            <li><a href="#" role="button" class="pure-button switch" id="group-by-party"  onmousedown="click.play()">Split by party</a>
+            <li><a href="#" role="button" class="pure-button switch" id="group-by-party"  a onclick = "playSound()">Split by party</a>
             </li>
-            <li><a href="#" role="button" class="pure-button switch" id="group-by-donor-type"  onmousedown="click.play()">Split by type of donor</a>
+            <li><a href="#" role="button" class="pure-button switch" id="group-by-donor-type"  a onclick = "playSound()">Split by type of donor</a>
             </li>
         </ul>
     </nav>
