@@ -162,6 +162,7 @@ function amountType() {
 		.charge(function(d) { return -Math.pow(d.radius, 2.0) / 3; })
 		.on("tick", types)
 		.start();
+	         .colourByParty();
 }
 
 
