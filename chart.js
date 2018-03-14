@@ -296,7 +296,7 @@ function moveToFunds(alpha) {
 		d.y += (centreY - d.y) * (brake + 0.02) * alpha * 1.1;
 	};
 	
-}
+
 
 // Collision detection function by m bostock
 function collide(alpha) {
