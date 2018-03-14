@@ -243,7 +243,7 @@ function moveToParties(alpha) {
 		d.y += (centreY - d.y) * (brake + 0.02) * alpha * 1.1;
 	};
 	
-	/*function moveToAmount(alpha) {
+	function moveToAmount(alpha) {
 	return function(d) {
 		var centreY = svgCentre.y;
 		if (d.value <= 25001) {
@@ -264,7 +264,7 @@ function moveToParties(alpha) {
 
 		d.x += (centreX - d.x) * (brake + 0.02) * alpha * 1.1;
 		d.y += (centreY - d.y) * (brake + 0.02) * alpha * 1.1;
-	};*/
+	};
 }
 
 function moveToEnts(alpha) {
