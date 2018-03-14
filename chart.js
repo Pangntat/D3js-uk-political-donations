@@ -425,7 +425,7 @@ function mouseout() {
 		mosie.classed("active", false);
 
 		d3.select(".tooltip")
-			.style("display", "none")
+			.style("display", "none");
 	responsiveVoice.cancel();
 		}
 
