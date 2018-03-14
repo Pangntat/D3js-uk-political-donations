@@ -242,6 +242,8 @@ function moveToParties(alpha) {
 		d.x += (centreX - d.x) * (brake + 0.02) * alpha * 1.1;
 		d.y += (centreY - d.y) * (brake + 0.02) * alpha * 1.1;
 	};
+
+}
 	
 	function moveToAmounts(alpha) {
 	return function(d) {
@@ -265,7 +267,7 @@ function moveToParties(alpha) {
 		d.x += (centreX - d.x) * (brake + 0.06) * alpha * 1.2;
 		d.y += (centreY - d.y) * (brake + 0.06) * alpha * 1.2;
 	};
-}
+   }
 
 function moveToEnts(alpha) {
 	return function(d) {
@@ -297,7 +299,7 @@ function moveToFunds(alpha) {
 	};
 	
 
-
+}
 // Collision detection function by m bostock
 function collide(alpha) {
   var quadtree = d3.geom.quadtree(nodes);
