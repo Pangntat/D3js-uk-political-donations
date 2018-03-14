@@ -270,7 +270,7 @@ function moveToParties(alpha) {
 		d.x += (centreX - d.x) * (brake + 0.06) * alpha * 1.2;
 		d.y += (centreY - d.y) * (brake + 0.06) * alpha * 1.2;
 	};
-
+   }
 function moveToEnts(alpha) {
 	return function(d) {
 		var centreY = entityCentres[d.entity].y;
