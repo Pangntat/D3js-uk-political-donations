@@ -246,7 +246,9 @@ function moveToParties(alpha) {
 
 }
 	
-	function moveToAmounts(alpha) {
+	
+	
+   function moveToAmounts(alpha) {
 	return function(d) {
 		var centreY = svgCentre.y;
 		if (d.value <= 25001) {
@@ -268,8 +270,6 @@ function moveToParties(alpha) {
 		d.x += (centreX - d.x) * (brake + 0.06) * alpha * 1.2;
 		d.y += (centreY - d.y) * (brake + 0.06) * alpha * 1.2;
 	};
-	}
-   }
 
 function moveToEnts(alpha) {
 	return function(d) {
@@ -299,8 +299,6 @@ function moveToFunds(alpha) {
 		d.x += (centreX - d.x) * (brake + 0.02) * alpha * 1.1;
 		d.y += (centreY - d.y) * (brake + 0.02) * alpha * 1.1;
 	};
-	
-
 }
 // Collision detection function by m bostock
 function collide(alpha) {
