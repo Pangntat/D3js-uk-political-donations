@@ -48,7 +48,7 @@ function transition(name) {
 		$("#view-donor-type").fadeOut(250);
 		$("#view-source-type").fadeOut(250);
 		$("#view-party-type").fadeOut(250);
-		$("#view-amount-type").fadeOut(250);
+		//$("#view-amount-type").fadeOut(250);
 		return total();
 		//location.reload();
 	}
@@ -58,7 +58,7 @@ function transition(name) {
 		$("#view-donor-type").fadeOut(250);
 		$("#view-source-type").fadeOut(250);
 		$("#view-party-type").fadeIn(1000);
-		$("#view-amount-type").fadeOut(250);
+		//$("#view-amount-type").fadeOut(250);
 		return partyGroup();
 	}
 	if (name === "group-by-donor-type") {
@@ -67,7 +67,7 @@ function transition(name) {
 		$("#view-party-type").fadeOut(250);
 		$("#view-source-type").fadeOut(250);
 		$("#view-donor-type").fadeIn(1000);
-		$("#view-amount-type").fadeOut(250);
+		//$("#view-amount-type").fadeOut(250);
 		return donorType();
 	}
 	if (name === "group-by-money-source"){
@@ -76,7 +76,7 @@ function transition(name) {
 		$("#view-donor-type").fadeOut(250);
 		$("#view-party-type").fadeOut(250);
 		$("#view-source-type").fadeIn(1000);
-	        $("#view-amount-type").fadeOut(250);
+	       // $("#view-amount-type").fadeOut(250);
 		return fundsType();
 	}
         if (name === "group-by-amount-of-donation"){
@@ -85,7 +85,7 @@ function transition(name) {
 		$("#view-donor-type").fadeOut(250);
 		$("#view-party-type").fadeOut(250);
 		$("#view-source-type").fadeOut(250);
-		$("#view-amount-type").fadeIn(1000);
+		//$("#view-amount-type").fadeIn(1000);
 		return amountType();
 	}
 	
@@ -158,13 +158,13 @@ function fundsType() {
 }
 
 
-function amountType() {
-	force.gravity(0)
-		.friction(0.75)
-		.charge(function(d) { return -Math.pow(d.radius, 2.0) / 3; })
-		.on("tick", amount)
-		.start();
-}
+//function amountType() {
+	//force.gravity(0)
+		//.friction(0.75)
+//.charge(function(d) { return -Math.pow(d.radius, 2.0) / 3; })
+		//.on("tick", amount)
+	//	.start();
+//}
 
 
 function parties(e) {
@@ -197,13 +197,13 @@ function all(e) {
 			.attr("cy", function(d) {return d.y; });
 }
 
-function amount(e) {
-	node.each(moveToCentre(e.alpha))
-		.each(collide(0.001));
+//function amount(e) {
+	//node.each(moveToCentre(e.alpha))
+		//.each(collide(0.001));
 
-		node.attr("cx", function(d) { return d.x; })
-			.attr("cy", function(d) {return d.y; });
-}
+		//node.attr("cx", function(d) { return d.x; })
+		///	.attr("cy", function(d) {return d.y; });
+//}
 
 
 function moveToCentre(alpha) {
@@ -243,7 +243,7 @@ function moveToParties(alpha) {
 		d.y += (centreY - d.y) * (brake + 0.02) * alpha * 1.1;
 	};
 	
-	function moveToAmount(alpha) {
+	/*function moveToAmount(alpha) {
 	return function(d) {
 		var centreY = svgCentre.y;
 		if (d.value <= 25001) {
@@ -264,7 +264,7 @@ function moveToParties(alpha) {
 
 		d.x += (centreX - d.x) * (brake + 0.02) * alpha * 1.1;
 		d.y += (centreY - d.y) * (brake + 0.02) * alpha * 1.1;
-	};
+	};*/
 }
 
 function moveToEnts(alpha) {
