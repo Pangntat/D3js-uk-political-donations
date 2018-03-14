@@ -250,24 +250,25 @@ function moveToParties(alpha) {
 	return function(d) {
 		var centreY = svgCentre.y;
 		if (d.value <= 25001) {
-				centreX = svgCentre.x + 500;
+				centreX = svgCentre.x + 250;
 			} else if (d.value <= 50001) {
-				centreX = svgCentre.x + 400;
+			        centreX = svgCentre.x + 200;
 			} else if (d.value <= 100001) {
-				centreX = svgCentre.x + 300;
+				centreX = svgCentre.x + 175;
 			} else  if (d.value <= 500001) {
-				centreX = svgCentre.x + 200;
+				centreX = svgCentre.x + 150;
 			} else  if (d.value <= 1000001) {
-				centreX = svgCentre.x + 100;
-			} else  if (d.value <= maxVal) {
-				centreX = svgCentre.x ;
+				centreX = svgCentre.x +80;
+			} else if (d.value<= maxVal) {	
+				centreX =svgCentre.x;
 			} else {
-				centreX = svgCentre.x; 
+				centreX = svgCentre.x;
 			}
-		
-		d.x += (centreX - d.x) * (brake + 0.02) * alpha * 2;
-		d.y += (centreY - d.y) * (brake + 0.02) * alpha * 2;
+
+		d.x += (centreX - d.x) * (brake + 0.06) * alpha * 1.2;
+		d.y += (centreY - d.y) * (brake + 0.06) * alpha * 1.2;
 	};
+	}
    }
 
 function moveToEnts(alpha) {
