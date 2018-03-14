@@ -262,7 +262,7 @@ function moveToParties(alpha) {
 			} else  if (d.value <= maxVal) {
 				centreX = svgCentre.x ;
 			} else {
-				centreX = svgCentre.x; // εάν το ποσό υπερβαίνει το maxVal πάλι θα μπει μαζί με τα μεγαλύτερα
+				centreX = svgCentre.x; 
 			}
 		
 		d.x += (centreX - d.x) * (brake + 0.02) * alpha * 2;
