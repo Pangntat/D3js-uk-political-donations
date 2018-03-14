@@ -162,7 +162,7 @@ function amountType() {
 	force.gravity(0)
 		.friction(0.75)
 .charge(function(d) { return -Math.pow(d.radius, 2.0) / 3; })
-		.on("tick", amount)
+		.on("tick", amounts)
 		.start();
 }
 
