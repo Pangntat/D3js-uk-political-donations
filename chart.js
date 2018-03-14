@@ -84,8 +84,8 @@ function transition(name) {
 		$("#value-scale").fadeOut(250);
 		$("#view-donor-type").fadeOut(250);
 		$("#view-party-type").fadeOut(250);
-                $("#view-amount-type").fadeIn(1000);
 		$("#view-source-type").fadeOut(250);
+		$("#view-amount-type").fadeIn(1000);
 		return amountType();
 	}
 	
@@ -162,9 +162,8 @@ function amountType() {
 	force.gravity(0)
 		.friction(0.75)
 		.charge(function(d) { return -Math.pow(d.radius, 2.0) / 3; })
-		.on("tick", types)
-		.start()
-	         .colourByParty();
+		.on("tick", amount)
+		.start();
 }
 
 
