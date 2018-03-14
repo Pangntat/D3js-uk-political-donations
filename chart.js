@@ -197,13 +197,13 @@ function all(e) {
 			.attr("cy", function(d) {return d.y; });
 }
 
-//function amount(e) {
-	//node.each(moveToCentre(e.alpha))
-		//.each(collide(0.001));
+function amount(e) {
+	node.each(moveToCentre(e.alpha))
+		.each(collide(0.001));
 
-		//node.attr("cx", function(d) { return d.x; })
-		///	.attr("cy", function(d) {return d.y; });
-//}
+		node.attr("cx", function(d) { return d.x; })
+			.attr("cy", function(d) {return d.y; });
+}
 
 
 function moveToCentre(alpha) {
