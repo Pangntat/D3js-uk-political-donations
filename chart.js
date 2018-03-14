@@ -197,7 +197,7 @@ function all(e) {
 			.attr("cy", function(d) {return d.y; });
 }
 
-function amount(e) {
+function amounts(e) {
 	node.each(moveToCentre(e.alpha))
 		.each(collide(0.001));
 
