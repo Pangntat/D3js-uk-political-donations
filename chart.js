@@ -163,7 +163,8 @@ function amountType() {
 		.friction(0.75)
 .charge(function(d) { return -Math.pow(d.radius, 2.0) / 3; })
 		.on("tick", amounts)
-		.start();
+		.start()
+	.colourByParty();;
 }
 
 
