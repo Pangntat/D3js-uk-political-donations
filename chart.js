@@ -264,7 +264,7 @@ function moveToEnts(alpha) {
 	};
 }
 
-function moveToFunds(alpha) {
+/*function moveToFunds(alpha) {
 	return function(d) {
 		var centreY = entityCentres[d.entity].y;
 		var centreX = entityCentres[d.entity].x;
@@ -278,7 +278,7 @@ function moveToFunds(alpha) {
 		d.x += (centreX - d.x) * (brake + 0.02) * alpha * 1.1;
 		d.y += (centreY - d.y) * (brake + 0.02) * alpha * 1.1;
 	};
-}
+}*/
 
 
 function moveToAmounts(alpha) {
