@@ -243,7 +243,7 @@ function moveToParties(alpha) {
 		d.y += (centreY - d.y) * (brake + 0.02) * alpha * 1.1;
 	};
 	
-	function moveToAmount(alpha) {
+	function moveToAmounts(alpha) {
 	return function(d) {
 		var centreY = svgCentre.y;
 		if (d.value <= 25001) {
