@@ -412,7 +412,8 @@ function mouseover(d, i) {
   	.style("left", (parseInt(d3.select(this).attr("cx") - 80) + offset.left) + "px")
     .style("top", (parseInt(d3.select(this).attr("cy") - (d.radius+150)) + offset.top) + "px")
 		.html(infoBox)
-			.style("display","block");
+			.style("display","block")
+	responsiveVoice.speak(donor + " " + amount + "£","UK English Male",{volume: 1});
 	
 	
 	}
